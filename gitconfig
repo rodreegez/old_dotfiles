@@ -1,0 +1,37 @@
+[github]
+  user  = rodreegez
+  token = 7e5137978e4c497c4173ba77608aba25
+[user]
+  name = Adam
+  email = electronicbattleweapon7@gmail.com
+[alias]
+  st = status -ss -b
+  c = add .
+  a = add -u
+  ll = commit -m
+  cdiff = log --pretty=format:'* %h %s - %an'
+  co = checkout
+  l = "!source ~/.dotfiles/git/git-log.sh && pretty_git_log"
+  ls = !git l -10
+  la = !git l --all
+  p = pull --rebase
+  g = grep
+	ctags = !.git/hooks/ctags
+[push]
+  default = tracking
+[color]
+  ui     = true
+  branch = auto
+  diff   = auto
+  status = auto
+[color "branch"]
+  master  = red
+  current = blue
+  local   = yellow
+  remote  = green
+[core]
+  excludesfile = /Users/rodreegez/.gitignore
+[heroku]
+	account = mint
+[init]
+	templatedir = ~/.git_template

@@ -1,0 +1,31 @@
+# Git
+alias gcall="git c && git a && git ll"
+alias git=hub
+alias g="git status"
+alias gl="git l"
+alias gt="git st"
+
+# Vim
+#if [ -d '/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/' ]; then
+#  alias vi='/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/Vim'
+#  alias vim='/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/Vim'
+#fi
+alias :e="vim"
+
+
+# Misc
+alias tf="tail -f "
+alias pow="powder"
+alias px="ps -aux | grep "
+alias get="git pull --rebase && (bundle check || echo bundle install --binstubs --path vendor/bundle && bundle install --binstubs --path vendor/bundle) && rake db:migrate:status db:migrate db:test:prepare test"
+
+# Rails
+alias sc="echo 'script/rails console' && ./script/rails console"
+alias ss="echo 'script/rails server' && ./script/rails server"
+alias sg="echo 'script/rails generate ' && ./script/rails generate "
+alias rrg="rake routes | grep "
+alias rit="ruby -I test "
+alias mig="rake db:migrate db:test:prepare"
+
+# Bundler
+alias b='bundle install --path .bundle/gems --binstubs .bundle/bin'

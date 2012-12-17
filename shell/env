@@ -1,0 +1,50 @@
+# Use vim as default editor
+export EDITOR="vim"
+
+# Node
+export NODE_PATH="/usr/local/lib/node_modules"
+
+# git
+source /usr/local/etc/bash_completion.d/git-completion.sh
+
+# rbenv
+eval "$(rbenv init -)"
+
+# Bundler
+export PATH="./.bundle/bin:$PATH"
+
+# Homebrew
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+# autojump
+[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# jsTestDriver
+export JSTESTDRIVER_HOME="/usr/local/bin"
+
+# Rubinius 1.9
+export RBXOPT=-X19
+export PATH=$PATH:/Users/Rodreegez/.rbenv/versions/rbx-2.0.0-dev/1.9
+
+# History
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Postgres
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
+
+# Prompt
+function parse_git_branch () {
+       git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+RED="\[\033[0;31m\]"
+YELLOW="\[\033[0;33m\]"
+GREEN="\[\033[0;32m\]"
+NO_COLOUR="\[\033[0m\]"
+
+PS1="$GREEN\w$YELLOW\$(parse_git_branch)$NO_COLOUR\$ "
