@@ -45,7 +45,7 @@ noremap j gj
 noremap k gk
 
 " strip whitespace when saving
-autocmd BufWritePre {*} :%s/\s\+$//e
+autocmd FileType rb autocmd BufWritePre {*} :%s/\s\+$//e
 
 command! W :w                     " :W  is the same as :w
 command! Q :q                     " :Q  is the same as :q
@@ -80,3 +80,13 @@ nnoremap <C-l> <C-w>l
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 let g:ragtag_global_maps = 1
+
+nnoremap <leader>q :!open -a Marked.app '%:p' :redraw! <cr>
+
+au BufNewFile,BufRead admin.py     setlocal filetype=python.django
+au BufNewFile,BufRead urls.py      setlocal filetype=python.django
+au BufNewFile,BufRead models.py    setlocal filetype=python.django
+au BufNewFile,BufRead views.py     setlocal filetype=python.django
+au BufNewFile,BufRead settings.py  setlocal filetype=python.django
+au BufNewFile,BufRead forms.py     setlocal filetype=python.django
+

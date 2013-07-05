@@ -4,6 +4,8 @@ alias git=hub
 alias g="git status"
 alias gl="git l"
 alias gt="git st"
+alias gg="git grep "
+alias gp="git push"
 
 # Vim
 #if [ -d '/usr/local/Cellar/macvim/HEAD/MacVim.app/Contents/MacOS/' ]; then
@@ -17,7 +19,7 @@ alias :e="vim"
 alias tf="tail -f "
 alias pow="powder"
 alias px="ps -aux | grep "
-alias get="git pull --rebase && (bundle check || echo bundle install --binstubs --path vendor/bundle && bundle install --binstubs --path vendor/bundle) && rake db:migrate:status db:migrate db:test:prepare test"
+alias get="git pull --rebase && (bundle check || echo b) && rake db:migrate:status db:migrate db:test:prepare test"
 
 # Rails
 alias sc="echo 'script/rails console' && ./script/rails console"
@@ -29,3 +31,14 @@ alias mig="rake db:migrate db:test:prepare"
 
 # Bundler
 alias b='bundle install --path .bundle/gems --binstubs .bundle/bin'
+
+# Django
+alias pm='python manage.py '
+
+# Vagrant
+alias vnp='vagrant up --no-provision'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vr='vagrant halt && vagrant up --no-provision'
+alias vs='vagrant ssh'
+alias vst='vagrant status'

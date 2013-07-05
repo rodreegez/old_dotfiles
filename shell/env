@@ -1,8 +1,14 @@
-# Use vim as default editor
-export EDITOR="vim"
+# Postgres
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Node
-export NODE_PATH="/usr/local/lib/node_modules"
+PATH="/usr/local/share/npm/bin:$PATH"
+
+# Python
+PATH="/usr/local/share/python:$PATH"
+
+# Use vim as default editor
+export EDITOR="vim"
 
 # git
 source /usr/local/etc/bash_completion.d/git-completion.sh
@@ -32,10 +38,6 @@ export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 shopt -s histappend                      # append to history, don't overwrite it
-
-# Postgres
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-
 
 # Prompt
 function parse_git_branch () {
